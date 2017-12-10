@@ -3,6 +3,9 @@ close all
 y(1)=0; % meter
 v(1)=0; %meter/second
 a(1)=0; %meter/second2
+y1(1)=0; % meter
+v1(1)=0; %meter/second
+a(1)=0; %meter/second2
 t(1)=0; %second
 dt=0.1; %second 
 mp(1)=4 ; %kilogram propellant mass
@@ -25,8 +28,10 @@ end
 % TI = Ft*b_t; toplam itme
 i=2;
 while v>0
+  
     t=t+dt
-    a = (-(M * g) - (k * (v(i-1).^2))) / M
-    v(i) = v(i-1) + (a * dt)
-    y(i) = y(i-1) + (v(i) * dt) - (0.5 * a * ((dt) ^ 2))
+    a = (-(M*g) - (k*(v(i-1).^2)))/ M
+    v(i) = v(i-1)+(a*dt)
+    y(i) = y(i-1)+(v(i)*dt)-(0.5*a*((dt)^2))
+      i=i+1;
 end
