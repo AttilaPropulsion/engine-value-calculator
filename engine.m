@@ -22,7 +22,7 @@ a=((Ft-M*g-(k*v(i-1).^2))-dm*v(i-1))/M;
 v(i)=v(i-1)+a*dt;
 y(i)=y(i-1)+(v(i)*dt)+(0.5*a*(dt^2));
 end
-TI = Ft*b_t; toplam itme
+TI = Ft*b_t; toplam impulse
 i=2;
 while v>0
   
